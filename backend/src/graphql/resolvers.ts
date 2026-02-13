@@ -299,6 +299,21 @@ export const resolvers = {
         createOrder: async (_: any, { input }: any, context: any) => {
             const user = requireAuth(context);
 
+            // Normalize payment method from frontend values (e.g. 'bankTransfer')
+            const rawPm = input.paymentMethod || '';
+            const pmKey = String(rawPm).toLowerCase().replace(/[-_\s]/g, '');
+            const mapping = {
+                promptpay: 'promptpay',
+                prompt_pay: 'promptpay',
+                creditcard: 'credit_card',
+                credit_card: 'credit_card',
+                card: 'credit_card',
+                banktransfer: 'bank_transfer',
+                bank_transfer: 'bank_transfer',
+                bank: 'bank_transfer',
+            } as Record<string, string>;
+            const paymentMethod = mapping[pmKey] || 'bank_transfer';
+
             // Get products and calculate totals
             const items = await Promise.all(
                 input.items.map(async (item: any) => {
@@ -324,14 +339,31 @@ export const resolvers = {
             const shippingFee = subtotal >= 1000 ? 0 : 50; // Free shipping over 1000 baht
             const total = subtotal + shippingFee;
 
+            // Generate order number (do this here to avoid required validation errors)
+            const date = new Date();
+            const prefix = `KHN${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}`;
+            const count = await Order.countDocuments();
+            const orderNumber = `${prefix}${String(count + 1).padStart(5, '0')}`;
+
+            // Simulate payments: instant success for promptpay/credit_card, pending for bank transfer
+            let paymentStatus: any = 'pending';
+            let status: any = 'pending';
+            if (paymentMethod === 'promptpay' || paymentMethod === 'credit_card') {
+                paymentStatus = 'completed';
+                status = 'paid';
+            }
+
             const order = await Order.create({
+                orderNumber,
                 user: user._id,
                 items,
                 subtotal,
                 shippingFee,
                 total,
                 shippingAddress: input.shippingAddress,
-                paymentMethod: input.paymentMethod,
+                paymentMethod,
+                paymentStatus,
+                status,
                 notes: input.notes,
             });
 
@@ -450,11 +482,11 @@ export const resolvers = {
                 throw new GraphQLError('Access denied');
             }
 
+            // Save the slip and set paymentStatus to 'pending' so admin verifies it.
+            // Do not auto-change the order `status` here.
             return Order.findByIdAndUpdate(id, {
                 paymentSlip: slipUrl,
-                status: 'paid' // Automatically move to paid status? 
-                // Actually maybe better to keep it 'pending' until admin confirms.
-                // But the user said "กดยืนยันยอดเงินได้", so 'pending' is better.
+                paymentStatus: 'pending'
             }, { new: true })
                 .populate('user')
                 .populate('items.product');
