@@ -1,0 +1,106 @@
+{
+    "site": {
+        "name": "FullOption.IT",
+        "tagline": "Quality Computer & Technology Products"
+    },
+    "nav": {
+        "home": "Home",
+        "products": "Products",
+        "cart": "Cart",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "myOrders": "My Orders",
+        "admin": "Admin"
+    },
+    "home": {
+        "hero": {
+            "title": "Computer Equipment",
+            "subtitle": "& Technology",
+            "description": "Quality products, great prices, with after-sales service",
+            "cta": "View All Products"
+        },
+        "featured": "Featured Products",
+        "categories": "Categories",
+        "viewAll": "View All"
+    },
+    "products": {
+        "title": "All Products",
+        "filter": "Filter",
+        "sort": "Sort",
+        "sortOptions": {
+            "newest": "Newest",
+            "priceAsc": "Price: Low-High",
+            "priceDesc": "Price: High-Low"
+        },
+        "noProducts": "No products found",
+        "addToCart": "Add to Cart",
+        "outOfStock": "Out of Stock",
+        "specifications": "Specifications",
+        "reviews": "Reviews"
+    },
+    "cart": {
+        "title": "Shopping Cart",
+        "empty": "Your cart is empty",
+        "continueShopping": "Continue Shopping",
+        "subtotal": "Subtotal",
+        "shipping": "Shipping",
+        "freeShipping": "Free",
+        "total": "Total",
+        "checkout": "Proceed to Checkout",
+        "loginToCheckout": "Login to Checkout"
+    },
+    "checkout": {
+        "title": "Checkout",
+        "shipping": "Shipping Address",
+        "payment": "Payment Method",
+        "paymentMethods": {
+            "promptpay": "PromptPay",
+            "creditCard": "Credit/Debit Card",
+            "bankTransfer": "Bank Transfer"
+        },
+        "placeOrder": "Place Order",
+        "orderSuccess": "Order Placed Successfully!"
+    },
+    "auth": {
+        "login": "Login",
+        "register": "Register",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "name": "Name",
+        "phone": "Phone",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?",
+        "forgotPassword": "Forgot password?"
+    },
+    "address": {
+        "name": "Recipient Name",
+        "phone": "Phone Number",
+        "address": "Address",
+        "district": "District",
+        "province": "Province",
+        "postalCode": "Postal Code"
+    },
+    "order": {
+        "status": {
+            "pending": "Pending",
+            "paid": "Paid",
+            "processing": "Processing",
+            "shipped": "Shipped",
+            "delivered": "Delivered",
+            "cancelled": "Cancelled"
+        }
+    },
+    "common": {
+        "search": "Search",
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "retry": "Try again",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "baht": "฿"
+    }
+}

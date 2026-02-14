@@ -1,0 +1,107 @@
+{
+    "site": {
+        "name": "FullOption.IT",
+        "tagline": "อุปกรณ์คอมพิวเตอร์และเทคโนโลยีคุณภาพ"
+    },
+    "nav": {
+        "home": "หน้าแรก",
+        "products": "สินค้า",
+        "cart": "ตะกร้า",
+        "login": "เข้าสู่ระบบ",
+        "register": "สมัครสมาชิก",
+        "logout": "ออกจากระบบ",
+        "myOrders": "คำสั่งซื้อของฉัน",
+        "admin": "จัดการระบบ"
+    },
+    "home": {
+        "hero": {
+            "title": "อุปกรณ์คอมพิวเตอร์",
+            "subtitle": "และเทคโนโลยี",
+            "description": "สินค้าคุณภาพ ราคาดี พร้อมบริการหลังการขาย",
+            "cta": "ดูสินค้าทั้งหมด"
+        },
+        "featured": "สินค้าแนะนำ",
+        "categories": "หมวดหมู่สินค้า",
+        "viewAll": "ดูทั้งหมด"
+    },
+    "products": {
+        "title": "สินค้าทั้งหมด",
+        "filter": "กรอง",
+        "sort": "เรียงลำดับ",
+        "sortOptions": {
+            "newest": "ใหม่ล่าสุด",
+            "priceAsc": "ราคา: ต่ำ-สูง",
+            "priceDesc": "ราคา: สูง-ต่ำ"
+        },
+        "noProducts": "ไม่พบสินค้า",
+        "addToCart": "เพิ่มลงตะกร้า",
+        "outOfStock": "สินค้าหมด",
+        "specifications": "รายละเอียด",
+        "reviews": "รีวิว"
+    },
+    "cart": {
+        "title": "ตะกร้าสินค้า",
+        "empty": "ตะกร้าของคุณว่างเปล่า",
+        "continueShopping": "เลือกซื้อสินค้าต่อ",
+        "subtotal": "ยอดรวม",
+        "shipping": "ค่าจัดส่ง",
+        "freeShipping": "ฟรี",
+        "total": "รวมทั้งหมด",
+        "checkout": "ดำเนินการสั่งซื้อ",
+        "loginToCheckout": "เข้าสู่ระบบเพื่อสั่งซื้อ"
+    },
+    "checkout": {
+        "title": "ชำระเงิน",
+        "shipping": "ที่อยู่จัดส่ง",
+        "payment": "วิธีการชำระเงิน",
+        "paymentMethods": {
+            "promptpay": "พร้อมเพย์",
+            "creditCard": "บัตรเครดิต/เดบิต",
+            "bankTransfer": "โอนเงินผ่านธนาคาร",
+            "bank_transfer": "โอนเงินผ่านธนาคาร"
+        },
+        "placeOrder": "สั่งซื้อ",
+        "orderSuccess": "สั่งซื้อสำเร็จ!"
+    },
+    "auth": {
+        "login": "เข้าสู่ระบบ",
+        "register": "สมัครสมาชิก",
+        "email": "อีเมล",
+        "password": "รหัสผ่าน",
+        "confirmPassword": "ยืนยันรหัสผ่าน",
+        "name": "ชื่อ",
+        "phone": "เบอร์โทรศัพท์",
+        "noAccount": "ยังไม่มีบัญชี?",
+        "hasAccount": "มีบัญชีแล้ว?",
+        "forgotPassword": "ลืมรหัสผ่าน?"
+    },
+    "address": {
+        "name": "ชื่อผู้รับ",
+        "phone": "เบอร์โทรศัพท์",
+        "address": "ที่อยู่",
+        "district": "อำเภอ/เขต",
+        "province": "จังหวัด",
+        "postalCode": "รหัสไปรษณีย์"
+    },
+    "order": {
+        "status": {
+            "pending": "รอดำเนินการ",
+            "paid": "ชำระเงินแล้ว",
+            "processing": "กำลังเตรียมสินค้า",
+            "shipped": "จัดส่งแล้ว",
+            "delivered": "สำเร็จ",
+            "cancelled": "ยกเลิก"
+        }
+    },
+    "common": {
+        "search": "ค้นหา",
+        "loading": "กำลังโหลด...",
+        "error": "เกิดข้อผิดพลาด",
+        "retry": "ลองอีกครั้ง",
+        "save": "บันทึก",
+        "cancel": "ยกเลิก",
+        "delete": "ลบ",
+        "edit": "แก้ไข",
+        "baht": "฿"
+    }
+}
